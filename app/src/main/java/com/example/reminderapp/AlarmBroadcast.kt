@@ -12,6 +12,7 @@ import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 
 
+@Suppress("DEPRECATION")
 class AlarmBroadcast : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val bundle = intent.extras

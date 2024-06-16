@@ -1,16 +1,22 @@
 package com.example.reminderapp
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class NotificationMessage : AppCompatActivity() {
+    private var textView: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_notification_message)
+        textView = findViewById(R.id.tv_message)
+        val bundle = intent.extras
 
+        if (bundle != null) {
+            val message = bundle.getString("message")
+            textView?.text = message ?: "No message received"
+        }
     }
 }
+
