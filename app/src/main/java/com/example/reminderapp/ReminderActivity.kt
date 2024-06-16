@@ -31,7 +31,7 @@ class ReminderActivity : AppCompatActivity() {
         mDatebtn =
             findViewById<View>(R.id.btnDate) as Button //assigned all the material reference to get and set data
         mTimebtn = findViewById<View>(R.id.btnTime) as Button
-        mSubmitbtn = findViewById<View>(R.id.btnSbumit) as Button
+        mSubmitbtn = findViewById<View>(R.id.btnSubmit) as Button
         mTimebtn!!.setOnClickListener {
             selectTime() //when we click on the choose time button it calls the select time method
         }
